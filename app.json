@@ -1,0 +1,18 @@
+{
+    "name": "PDF Blocks Server",
+    "description": "Self-hosted PDF server to merge, password-protect, watermark PDF documents, and more. https://www.pdfblocks.com.",
+    "repository": "https://github.com/pdfblocks/heroku",
+    "logo": "https://www.pdfblocks.com/assets/images/pdfblocks-icon.svg",
+    "stack": "container",
+    "env": {
+        "LICENSE_KEY": {
+            "description": "Your PDF Blocks license key. To try PDF Blocks without a license, set this field to \"evaluation\". To get a license key go to https://www.pdfblocks.com/licensing.",
+            "value": "evaluation",
+            "required": "true"
+        },
+        "API_KEY_HASH": {
+            "description": "An optional SHA-256 hash of a string to use as an API key. If set, API requests must have an X-Api-Key header with the string as the value.",
+            "required": false
+        }
+    }
+}
